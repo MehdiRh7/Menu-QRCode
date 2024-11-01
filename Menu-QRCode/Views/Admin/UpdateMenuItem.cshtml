@@ -1,17 +1,19 @@
-﻿@model Menu_QRCode.Category
+﻿@model Menu_QRCode.MenuItem
 
 @{
-    ViewData["Title"] = "CreateCategory";
+    ViewData["Title"] = "UpdateMenuItem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>CreateCategory</h1>
+<h1>UpdateMenuItem</h1>
 
-<h4>Category</h4>
+<h4>MenuItem</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="CreateCategory" enctype="multipart/form-data">
+        <form asp-action="UpdateMenuItem" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
@@ -23,9 +25,29 @@
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="discount" class="control-label"></label>
+                <input asp-for="discount" class="form-control" />
+                <span asp-validation-for="discount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoryId" class="control-label"></label>
+                <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="ImageUrl" class="control-label"></label>
-                <input type="file" asp-for="ImageUrl" class="form-control"/>
+                <input type="file" name="ImageUrl" class="form-control" />
                 <span asp-validation-for="ImageUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsAvailable" /> @Html.DisplayNameFor(model => model.IsAvailable)
+                </label>
             </div>
             <div class="form-group">
                 <label asp-for="CreatedAt" class="control-label"></label>
@@ -38,14 +60,14 @@
                 <span asp-validation-for="UpdatedAt" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="CategoriesList">Back to List</a>
+    <a asp-action="MenuItemsList">Back to List</a>
 </div>
 
 @section Scripts {

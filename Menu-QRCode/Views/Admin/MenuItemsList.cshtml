@@ -63,7 +63,7 @@
                 @Html.DisplayFor(modelItem => item.Category.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ImageUrl)
+                <img style="width:100px; height:100px" src="@item.ImageUrl" class="menu-img">
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IsAvailable)
@@ -75,9 +75,8 @@
                 @Html.DisplayFor(modelItem => item.UpdatedAt)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="EditMenuItem" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="DeleteMenuItem" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }

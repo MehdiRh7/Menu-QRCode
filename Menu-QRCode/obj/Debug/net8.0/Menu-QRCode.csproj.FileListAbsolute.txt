@@ -268,3 +268,4 @@ C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\bin\Debug\net8.0\runtimes
 C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\obj\Debug\net8.0\Menu-QRCode.sourcelink.json

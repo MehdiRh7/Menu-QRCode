@@ -44,7 +44,7 @@ namespace DataLayer.Services
 
         public List<MenuItem> GetAll()
         {
-            return _context.MenuItems.ToList();
+            return _context.MenuItems.Include(o=>o.Category).ToList();
         }
 
         public MenuItem GetById(Guid id)

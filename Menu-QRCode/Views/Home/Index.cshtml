@@ -1,4 +1,5 @@
 ﻿@model Menu_QRCode.Views.Viewmodels.Categories_items_Viewmodels
+
 <main class="main">
     <!-- Menu Section -->
     <section id="menu" class="menu section">
@@ -23,13 +24,24 @@
                 </div>
             </div><!-- Menu Filters -->
 
-            <div class="row isotope-container" data-aos="fade-up" data-aos-delay="200">
+            <div  class="row isotope-container" data-aos="fade-up" data-aos-delay="200">
                 @foreach (var item in Model.menuItems)
                 {
                     <div class="col-lg-6 menu-item isotope-item filter-@item.CategoryId">
-                        <img src="assets/img/menu/@item.ImageUrl" class="menu-img" alt="">
+                        <img src="@item.ImageUrl" class="menu-img" alt="">
                         <div class="menu-content">
-                            <a href="#">@item.Name</a><span>@item.Price تومان</span>
+                            <a href="#">@item.Name</a>
+
+                            @if (item.discount > 0)
+                            {
+                                <span style="text-decoration: line-through; color: red;">@item.Price تومان</span>
+                                <span>@(item.Price - (item.Price * ((double)item.discount / 100))) تومان</span>
+                            }
+                            else
+                            {
+                                <span>@item.Price تومان</span>
+                            }
+
                         </div>
                         <div class="menu-ingredients">
                             @item.Description
