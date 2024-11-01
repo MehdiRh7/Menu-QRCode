@@ -1,0 +1,73 @@
+﻿@model Menu_QRCode.Views.Viewmodels.Categories_items_Viewmodels
+<main class="main">
+    <!-- Menu Section -->
+    <section id="menu" class="menu section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Menu</h2>
+            <p>منوی خوشمزه ما را بررسی کنید</p>
+        </div><!-- End Section Title -->
+
+        <div class="container isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <ul class="menu-filters isotope-filters">
+                        <li data-filter="*" class="filter-active">کلی</li>
+                        @foreach (var category in Model.categories)
+                        {
+                            <li data-filter=".filter-@category.Id">@category.Name</li>
+                        }
+                    </ul>
+                </div>
+            </div><!-- Menu Filters -->
+
+            <div class="row isotope-container" data-aos="fade-up" data-aos-delay="200">
+                @foreach (var item in Model.menuItems)
+                {
+                    <div class="col-lg-6 menu-item isotope-item filter-@item.CategoryId">
+                        <img src="assets/img/menu/@item.ImageUrl" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">@item.Name</a><span>@item.Price تومان</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            @item.Description
+                        </div>
+                    </div>
+                }
+            </div><!-- Menu Container -->
+
+
+        </div>
+
+    </section><!-- /Menu Section -->
+</main>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const filterButtons = document.querySelectorAll(".menu-filters li");
+        const menuItems = document.querySelectorAll(".menu-item");
+
+        filterButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const filterValue = button.getAttribute("data-filter");
+
+                // تغییر کلاس فعال برای فیلتر
+                document.querySelector(".filter-active").classList.remove("filter-active");
+                button.classList.add("filter-active");
+
+                // فیلترسازی آیتم‌های منو
+                menuItems.forEach(item => {
+                    if (filterValue === "*" || item.classList.contains(filterValue.substring(1))) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+            });
+        });
+    });
+
+</script>
