@@ -5,9 +5,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>CreateMenuItem</h1>
-
-<h4>MenuItem</h4>
+<br />
+<br />
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -57,13 +56,14 @@
                 <input asp-for="UpdatedAt" class="form-control" />
                 <span asp-validation-for="UpdatedAt" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
-
+<br />
 <div>
     <a asp-action="MenuItemsList">Back to List</a>
 </div>

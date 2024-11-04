@@ -17,71 +17,71 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Menu_QRCode
 build_property.RootNamespace = Menu_QRCode
-build_property.ProjectDir = C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\
+build_property.ProjectDir = C:\Users\Stocknew1\Source\Repos\Menu_QRCode\Menu-QRCode\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode
+build_property.MSBuildProjectDirectory = C:\Users\Stocknew1\Source\Repos\Menu_QRCode\Menu-QRCode
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Mehdi Rh/source/repos/Menu-QRCode/Menu-QRCode/Views/Admin/CategoriesList.cshtml]
+[C:/Users/Stocknew1/Source/Repos/Menu_QRCode/Menu-QRCode/Views/Admin/CategoriesList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2F0ZWdvcmllc0xpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mehdi Rh/source/repos/Menu-QRCode/Menu-QRCode/Views/Admin/CreateCategory.cshtml]
+[C:/Users/Stocknew1/Source/Repos/Menu_QRCode/Menu-QRCode/Views/Admin/CreateCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlQ2F0ZWdvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mehdi Rh/source/repos/Menu-QRCode/Menu-QRCode/Views/Admin/CreateMenuItem.cshtml]
+[C:/Users/Stocknew1/Source/Repos/Menu_QRCode/Menu-QRCode/Views/Admin/CreateMenuItem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlTWVudUl0ZW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mehdi Rh/source/repos/Menu-QRCode/Menu-QRCode/Views/Admin/DeleteCategory.cshtml]
+[C:/Users/Stocknew1/Source/Repos/Menu_QRCode/Menu-QRCode/Views/Admin/DeleteCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlQ2F0ZWdvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mehdi Rh/source/repos/Menu-QRCode/Menu-QRCode/Views/Admin/DeleteMenuItem.cshtml]
+[C:/Users/Stocknew1/Source/Repos/Menu_QRCode/Menu-QRCode/Views/Admin/DeleteMenuItem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlTWVudUl0ZW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mehdi Rh/source/repos/Menu-QRCode/Menu-QRCode/Views/Admin/MenuItemsList.cshtml]
+[C:/Users/Stocknew1/Source/Repos/Menu_QRCode/Menu-QRCode/Views/Admin/MenuItemsList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWVudUl0ZW1zTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mehdi Rh/source/repos/Menu-QRCode/Menu-QRCode/Views/Admin/UpdateCategory.cshtml]
+[C:/Users/Stocknew1/Source/Repos/Menu_QRCode/Menu-QRCode/Views/Admin/UpdateCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXBkYXRlQ2F0ZWdvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mehdi Rh/source/repos/Menu-QRCode/Menu-QRCode/Views/Admin/UpdateMenuItem.cshtml]
+[C:/Users/Stocknew1/Source/Repos/Menu_QRCode/Menu-QRCode/Views/Admin/UpdateMenuItem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXBkYXRlTWVudUl0ZW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mehdi Rh/source/repos/Menu-QRCode/Menu-QRCode/Views/Home/Index.cshtml]
+[C:/Users/Stocknew1/Source/Repos/Menu_QRCode/Menu-QRCode/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mehdi Rh/source/repos/Menu-QRCode/Menu-QRCode/Views/Home/Privacy.cshtml]
+[C:/Users/Stocknew1/Source/Repos/Menu_QRCode/Menu-QRCode/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mehdi Rh/source/repos/Menu-QRCode/Menu-QRCode/Views/Shared/Error.cshtml]
+[C:/Users/Stocknew1/Source/Repos/Menu_QRCode/Menu-QRCode/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mehdi Rh/source/repos/Menu-QRCode/Menu-QRCode/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Stocknew1/Source/Repos/Menu_QRCode/Menu-QRCode/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mehdi Rh/source/repos/Menu-QRCode/Menu-QRCode/Views/_ViewImports.cshtml]
+[C:/Users/Stocknew1/Source/Repos/Menu_QRCode/Menu-QRCode/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mehdi Rh/source/repos/Menu-QRCode/Menu-QRCode/Views/_ViewStart.cshtml]
+[C:/Users/Stocknew1/Source/Repos/Menu_QRCode/Menu-QRCode/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mehdi Rh/source/repos/Menu-QRCode/Menu-QRCode/Views/Shared/_Layout.cshtml]
+[C:/Users/Stocknew1/Source/Repos/Menu_QRCode/Menu-QRCode/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-6shqn3jiz6

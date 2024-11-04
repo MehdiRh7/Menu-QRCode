@@ -1,6 +1,7 @@
 ﻿using DataLayer.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.CodeAnalysis.FlowAnalysis;
 
 namespace Menu_QRCode.Controllers
 {
@@ -33,6 +34,10 @@ namespace Menu_QRCode.Controllers
                     ImageUrl.CopyTo(stream);
                 }
                 category.ImageUrl = $"/assets/img/{ImageUrl.FileName}";
+            }
+            if(category.Description == null)
+            {
+                category.Description = string.Empty;
             }
             _categoryRepository.InsertCategory(category);
             _categoryRepository.Save();
@@ -116,6 +121,10 @@ namespace Menu_QRCode.Controllers
                     ImageUrl.CopyTo(stream);
                 }
                 menuItem.ImageUrl = $"/assets/img/menu/{ImageUrl.FileName}";
+            }
+            if (menuItem.Description == null)
+            {
+                menuItem.Description = string.Empty;
             }
             _menuItemRepository.InsertMenuItem(menuItem);
             _menuItemRepository.Save();

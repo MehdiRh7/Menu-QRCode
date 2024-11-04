@@ -12,7 +12,7 @@ builder.Services.AddDbContext<Context>(options =>
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IMenuItemRepository, MenuItemRepository>();
 builder.Services.AddControllersWithViews();
-builder.WebHost.UseUrls("http://0.0.0.0:7133");
+//builder.WebHost.UseUrls("http://0.0.0.0:7133");
 
 var app = builder.Build();
 
