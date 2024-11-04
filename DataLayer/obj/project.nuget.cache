@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B/1t9F1Yq7OlR8uCzuBm9jCqnBFM3/LeHVkTm9wbu8nkHjWWsXUOkWBWnKLUfs42foThC9xZ9HD9tidq4LaSPg==",
+  "dgSpecHash": "fOC+rGbzeqoscVX5z2f5dn3CoZ0gedPN+fE73S5gH8hV1Q8CvUOJb6CPZobWb/Hu0jNhRFTUj2M+xsXMt4qcyQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Stocknew1\\Source\\Repos\\Menu_QRCode\\DataLayer\\DataLayer.csproj",
+  "projectFilePath": "C:\\Users\\Stocknew1\\source\\repos\\Menu_QRCode\\DataLayer\\DataLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Stocknew1\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Stocknew1\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

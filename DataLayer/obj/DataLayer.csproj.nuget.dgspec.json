@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Stocknew1\\Source\\Repos\\Menu_QRCode\\DataLayer\\DataLayer.csproj": {}
+    "C:\\Users\\Stocknew1\\source\\repos\\Menu_QRCode\\DataLayer\\DataLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Stocknew1\\Source\\Repos\\Menu_QRCode\\DataLayer\\DataLayer.csproj": {
+    "C:\\Users\\Stocknew1\\source\\repos\\Menu_QRCode\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Stocknew1\\Source\\Repos\\Menu_QRCode\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Stocknew1\\source\\repos\\Menu_QRCode\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "C:\\Users\\Stocknew1\\Source\\Repos\\Menu_QRCode\\DataLayer\\DataLayer.csproj",
+        "projectPath": "C:\\Users\\Stocknew1\\source\\repos\\Menu_QRCode\\DataLayer\\DataLayer.csproj",
         "packagesPath": "C:\\Users\\Stocknew1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Stocknew1\\Source\\Repos\\Menu_QRCode\\DataLayer\\obj\\",
+        "outputPath": "C:\\Users\\Stocknew1\\source\\repos\\Menu_QRCode\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Stocknew1\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -8074,11 +8074,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Stocknew1\\Source\\Repos\\Menu_QRCode\\Menu-QRCode\\Menu-QRCode.csproj",
+      "projectUniqueName": "C:\\Users\\Stocknew1\\source\\repos\\Menu_QRCode\\Menu-QRCode\\Menu-QRCode.csproj",
       "projectName": "Menu-QRCode",
-      "projectPath": "C:\\Users\\Stocknew1\\Source\\Repos\\Menu_QRCode\\Menu-QRCode\\Menu-QRCode.csproj",
+      "projectPath": "C:\\Users\\Stocknew1\\source\\repos\\Menu_QRCode\\Menu-QRCode\\Menu-QRCode.csproj",
       "packagesPath": "C:\\Users\\Stocknew1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Stocknew1\\Source\\Repos\\Menu_QRCode\\Menu-QRCode\\obj\\",
+      "outputPath": "C:\\Users\\Stocknew1\\source\\repos\\Menu_QRCode\\Menu-QRCode\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Stocknew1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8095,8 +8095,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Stocknew1\\Source\\Repos\\Menu_QRCode\\DataLayer\\DataLayer.csproj": {
-              "projectPath": "C:\\Users\\Stocknew1\\Source\\Repos\\Menu_QRCode\\DataLayer\\DataLayer.csproj"
+            "C:\\Users\\Stocknew1\\source\\repos\\Menu_QRCode\\DataLayer\\DataLayer.csproj": {
+              "projectPath": "C:\\Users\\Stocknew1\\source\\repos\\Menu_QRCode\\DataLayer\\DataLayer.csproj"
             }
           }
         }

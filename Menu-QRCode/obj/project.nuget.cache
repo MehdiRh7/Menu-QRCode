@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f72XJ6eNQA0gHhZ8xDnMykBMinLvMP/pfL4JOaeU7O8el8r29aLHbdd7xADdnoEzIEilCL3m64n7iWUE9hh7lA==",
+  "dgSpecHash": "tZ/ETCx75zi9qM2jukI7mURrlLitWewposhrAkHfN00RktET3a6p5uqNhSLADUxU6wJzIXN6xuyC3jZg9gzAGw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Stocknew1\\Source\\Repos\\Menu_QRCode\\Menu-QRCode\\Menu-QRCode.csproj",
+  "projectFilePath": "C:\\Users\\Stocknew1\\source\\repos\\Menu_QRCode\\Menu-QRCode\\Menu-QRCode.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Stocknew1\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Stocknew1\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
