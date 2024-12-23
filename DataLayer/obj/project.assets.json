@@ -4216,19 +4216,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mehdi Rh\\.nuget\\packages\\": {}
+    "C:\\Users\\Stocknew1\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\DataLayer\\DataLayer.csproj",
+      "projectUniqueName": "C:\\Users\\Stocknew1\\source\\repos\\Menu_QRCode\\DataLayer\\DataLayer.csproj",
       "projectName": "DataLayer",
-      "projectPath": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\DataLayer\\DataLayer.csproj",
-      "packagesPath": "C:\\Users\\Mehdi Rh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\DataLayer\\obj\\",
+      "projectPath": "C:\\Users\\Stocknew1\\source\\repos\\Menu_QRCode\\DataLayer\\DataLayer.csproj",
+      "packagesPath": "C:\\Users\\Stocknew1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Stocknew1\\source\\repos\\Menu_QRCode\\DataLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Mehdi Rh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Stocknew1\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4248,6 +4248,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4299,7 +4304,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

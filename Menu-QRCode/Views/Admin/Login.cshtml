@@ -1,8 +1,14 @@
 ﻿@{
     ViewData["Title"] = "Login";
 }
-
-<h2>@ViewData["Title"]</h2>
+<br />
+<br />
+<br />
+<main class="main">
+    <center>
+<h2>ورود به پنل ادمین</h2>
+    </center>
+    <br />
 
 @if (ViewBag.ErrorMessage != null)
 {
@@ -11,18 +17,19 @@
     </div>
 }
 
-<form asp-action="Login" method="post">
+<form class="container" style="width:80%" asp-action="Login" method="post">
     <div class="form-group">
-        <label for="Username">Username</label>
+        <label for="Username">نام کاربری</label>
         <input type="text" class="form-control" id="Username" name="Username" required />
     </div>
 
     <div class="form-group">
-        <label for="Password">Password</label>
+        <label for="Password">رمز عبور</label>
         <input type="password" class="form-control" id="Password" name="Password" required />
     </div>
-
+    <br />
     <div class="form-group">
-        <button type="submit" class="btn btn-primary">Login</button>
+        <button type="submit" class="btn btn-primary">ورود</button>
     </div>
 </form>
+</main>

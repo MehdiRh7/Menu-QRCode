@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.CodeAnalysis.FlowAnalysis;
+using System.Text;
 
 namespace Menu_QRCode.Controllers
 {
@@ -37,24 +38,25 @@ namespace Menu_QRCode.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(string username, string password)
         {
+            
             var user = await _userManager.FindByNameAsync(username);
+            
+
             if (user != null && await _userManager.CheckPasswordAsync(user, password))
             {
-                if (user.Role == "Admin") // فرض کنید `IsAdmin` در مدل `User` ذخیره شده است
+                if (user.Role == "Admin") 
                 {
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     return RedirectToAction("CategoriesList", "Admin");
                 }
                 else
                 {
-                    // کاربر مجاز نیست
                     ModelState.AddModelError(string.Empty, "شما دسترسی به بخش ادمین ندارید.");
                     return View();
                 }
             }
             else
             {
-                // اعتبارسنجی اشتباه
                 ModelState.AddModelError(string.Empty, "نام کاربری یا رمز عبور اشتباه است.");
                 return View();
             }

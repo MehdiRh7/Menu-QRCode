@@ -540,3 +540,8 @@ C:\Users\Stocknew1\Source\Repos\Menu_QRCode\Menu-QRCode\obj\Debug\net8.0\refint\
 C:\Users\Stocknew1\Source\Repos\Menu_QRCode\Menu-QRCode\obj\Debug\net8.0\Menu-QRCode.pdb
 C:\Users\Stocknew1\Source\Repos\Menu_QRCode\Menu-QRCode\obj\Debug\net8.0\Menu-QRCode.genruntimeconfig.cache
 C:\Users\Stocknew1\Source\Repos\Menu_QRCode\Menu-QRCode\obj\Debug\net8.0\ref\Menu-QRCode.dll
+C:\Users\Stocknew1\source\repos\Menu_QRCode\Menu-QRCode\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Stocknew1\source\repos\Menu_QRCode\Menu-QRCode\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Stocknew1\source\repos\Menu_QRCode\Menu-QRCode\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Stocknew1\source\repos\Menu_QRCode\Menu-QRCode\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Stocknew1\source\repos\Menu_QRCode\Menu-QRCode\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
