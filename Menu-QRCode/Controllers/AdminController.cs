@@ -1,4 +1,7 @@
 ﻿using DataLayer.Interfaces;
+using DataLayer.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.CodeAnalysis.FlowAnalysis;
@@ -9,15 +12,59 @@ namespace Menu_QRCode.Controllers
     {
         ICategoryRepository _categoryRepository;
         IMenuItemRepository _menuItemRepository;
-        public AdminController(ICategoryRepository categoryRepository,IMenuItemRepository menuItemRepository)
+        private readonly UserManager<User> _userManager;
+        private readonly SignInManager<User> _signInManager;
+
+        public AdminController(UserManager<User> userManager, SignInManager<User> signInManager,ICategoryRepository categoryRepository, IMenuItemRepository menuItemRepository)
         {
+            _userManager = userManager;
+            _signInManager = signInManager;
             this._categoryRepository = categoryRepository;
             this._menuItemRepository = menuItemRepository;
         }
+        
+        public async Task<IActionResult> Login()
+        {
+           
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("CategoriesList", "Admin");
+            }
+
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(string username, string password)
+        {
+            var user = await _userManager.FindByNameAsync(username);
+            if (user != null && await _userManager.CheckPasswordAsync(user, password))
+            {
+                if (user.Role == "Admin") // فرض کنید `IsAdmin` در مدل `User` ذخیره شده است
+                {
+                    await _signInManager.SignInAsync(user, isPersistent: false);
+                    return RedirectToAction("CategoriesList", "Admin");
+                }
+                else
+                {
+                    // کاربر مجاز نیست
+                    ModelState.AddModelError(string.Empty, "شما دسترسی به بخش ادمین ندارید.");
+                    return View();
+                }
+            }
+            else
+            {
+                // اعتبارسنجی اشتباه
+                ModelState.AddModelError(string.Empty, "نام کاربری یا رمز عبور اشتباه است.");
+                return View();
+            }
+        }
+        [Authorize(Roles = "Admin")]
         public IActionResult CategoriesList()
         {
             return View(_categoryRepository.GetAll());
         }
+        [Authorize(Roles = "Admin")]
         public IActionResult CreateCategory() 
         {
             return View();
@@ -158,9 +205,9 @@ namespace Menu_QRCode.Controllers
                 {
                     ImageUrl.CopyTo(stream);
                 }
-                mi.ImageUrl = $"/assets/img/menu/{ImageUrl.FileName}";
+                menuItem.ImageUrl = $"/assets/img/menu/{ImageUrl.FileName}";
             }
-            _menuItemRepository.UpdateMenuItem(mi);
+            _menuItemRepository.UpdateMenuItem(menuItem);
             _menuItemRepository.Save();
             var categories = _categoryRepository.GetAll();
             ViewBag.CategoryId = new SelectList(categories, "Id", "Name");

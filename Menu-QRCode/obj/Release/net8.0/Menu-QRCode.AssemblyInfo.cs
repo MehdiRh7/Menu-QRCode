@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Menu-QRCode")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3026bb666bd91394312e9b42ec8df09f45ab9819")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e4f95277c4f0f7df5a5704c6c621c6dcee5e1e5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Menu-QRCode")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Menu-QRCode")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -79,6 +79,11 @@ namespace DataLayer.Services
         {
             try
             {
+                var existingMenuItem = _context.MenuItems.FirstOrDefault(x => x.Id == menuItem.Id);
+                if (existingMenuItem != null)
+                {
+                    _context.Entry(existingMenuItem).State = EntityState.Detached;
+                }
                 _context.Entry(menuItem).State = EntityState.Modified;
                 return true;
             }

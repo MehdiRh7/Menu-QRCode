@@ -9,6 +9,30 @@
       "PackagePath": "staticwebassets\\assets\\css\\main.css"
     },
     {
+      "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\img\\10%.png",
+      "PackagePath": "staticwebassets\\assets\\img\\10%.png"
+    },
+    {
+      "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\img\\10%.psd",
+      "PackagePath": "staticwebassets\\assets\\img\\10%.psd"
+    },
+    {
+      "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\img\\15%.png",
+      "PackagePath": "staticwebassets\\assets\\img\\15%.png"
+    },
+    {
+      "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\img\\20%.png",
+      "PackagePath": "staticwebassets\\assets\\img\\20%.png"
+    },
+    {
+      "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\img\\5%.png",
+      "PackagePath": "staticwebassets\\assets\\img\\5%.png"
+    },
+    {
+      "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\img\\Amoozesh.Keik.o.Deser_Book_a.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\Amoozesh.Keik.o.Deser_Book_a.jpg"
+    },
+    {
       "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\img\\Appetizers.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\Appetizers.jpg"
     },
@@ -41,6 +65,14 @@
       "PackagePath": "staticwebassets\\assets\\img\\Soups.jpg"
     },
     {
+      "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\img\\T-Art Logo.png",
+      "PackagePath": "staticwebassets\\assets\\img\\T-Art Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\img\\TamamShod.png",
+      "PackagePath": "staticwebassets\\assets\\img\\TamamShod.png"
+    },
+    {
       "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\img\\about-bg.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\about-bg.jpg"
     },
@@ -59,6 +91,10 @@
     {
       "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\img\\chefs\\chefs-3.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\chefs\\chefs-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\img\\cinnamon-tea-shutterstock_696392743-1030x1030-compressed.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\cinnamon-tea-shutterstock_696392743-1030x1030-compressed.jpg"
     },
     {
       "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\img\\events-bg.jpg",
@@ -121,6 +157,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\logo.png"
     },
     {
+      "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\img\\menu\\1688880360-ایس کارامل ماکیاتو.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\menu\\1688880360-ایس کارامل ماکیاتو.jpg"
+    },
+    {
       "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\img\\menu\\Appetizers1.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\menu\\Appetizers1.jpg"
     },
@@ -159,10 +199,6 @@
     {
       "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\img\\menu\\MainCourse3.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\menu\\MainCourse3.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\img\\menu\\Pasta2.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\menu\\Pasta2.jpg"
     },
     {
       "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\img\\menu\\Salads1.jpg",
@@ -229,6 +265,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\menu\\tuscan-grilled.jpg"
     },
     {
+      "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\img\\menu\\نوشیدنی-گرم.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\menu\\نوشیدنی-گرم.jpg"
+    },
+    {
       "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\img\\page-title-bg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\page-title-bg.webp"
     },
@@ -271,6 +311,10 @@
     {
       "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\img\\testimonials\\testimonials-5.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\testimonials\\testimonials-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\img\\نوشیدنی-گرم.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\نوشیدنی-گرم.jpg"
     },
     {
       "Id": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\wwwroot\\assets\\js\\main.js",

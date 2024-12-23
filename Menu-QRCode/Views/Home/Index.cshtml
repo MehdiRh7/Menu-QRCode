@@ -1,85 +1,268 @@
 ﻿@model Menu_QRCode.Views.Viewmodels.Categories_items_Viewmodels
+<style>
+    .scroll-container {
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+        .scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+
+    .scroll-content {
+        display: inline-flex;
+    }
+
+    #sticky {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background-color: #191815;
+    }
+
+    .category-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+    }
+
+    .menu-filters {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        padding: 15px;
+        max-width: 500px;
+    }
+
+        .menu-filters .filter-item {
+            list-style: none;
+            padding: 15px;
+            font-size: 18px;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .menu-filters .filter-item::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                border-radius: 10px;
+                z-index: 0;
+            }
+
+            .menu-filters .filter-item:hover::before,
+            .menu-filters .filter-item.active::before {
+                opacity: 0.7;
+            }
+
+            .menu-filters .filter-item:hover {
+                color: #222;
+                transform: scale(1.05);
+            }
+
+            .filter-active,
+            .menu-filters .filter-item.active {
+                color: #222;
+                font-weight: bold;
+                transform: scale(1.1);
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+    .image-container {
+        position: relative;
+    }
+
+    .image-behind {
+        height: 100%;
+        width: 35%;
+        float: right;
+    }
+
+    .image-front {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 70px;
+        height: 70px;
+    }
+
+    .container.section-title span {
+        font-family: 'Vazir', sans-serif;
+        font-weight: 600;
+    }
+
+        .container.section-title span:nth-child(2) {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+</style>
 
 <main class="main">
     <!-- Menu Section -->
     <section id="menu" class="menu section">
 
         <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Menu</h2>
-            <p>منوی خوشمزه ما را بررسی کنید</p>
-        </div><!-- End Section Title -->
+        <div class="container section-title" data-aos="fade-up" style="display: flex; align-items: center; justify-content: center; position: relative;">
+            <div style="flex-grow: 1; height: 1px; background-color: #ccc; margin-left: 10px; position: relative; top: 50%;">
+                <span style="position: absolute; bottom: 100%; right: 0; transform: translateY(-50%); font-size: 20px; color: white;">منـــــــــــــو</span>
+            </div>
+            <img src="/assets/img/T-Art Logo.png" alt="Logo" style="width: 130px; height: 130px; position: relative; z-index: 1;">
+            <div style="flex-grow: 1; height: 1px; background-color: #ccc; margin-right: 10px; position: relative; top: 50%;">
+                <span style="position: absolute; bottom: 100%; left: 0; transform: translateY(-50%); font-size: 20px; color: white;">art ـــــــــ T</span>
+            </div>
+        </div>
+        <!-- End Section Title -->
 
-        <div class="container isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-            <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div id="sticky" class="row" data-aos="fade-up" data-aos-delay="100">
                 <div class="col-lg-12 d-flex justify-content-center">
-                    <ul class="menu-filters isotope-filters">
-                        <li data-filter="*" class="filter-active">کلی</li>
-                        @foreach (var category in Model.categories)
-                        {
-                            <li data-filter=".filter-@category.Id">@category.Name</li>
-                        }
-                    </ul>
-                </div>
-            </div><!-- Menu Filters -->
-
-            <div  class="row isotope-container" data-aos="fade-up" data-aos-delay="200">
-                @foreach (var item in Model.menuItems)
-                {
-                    <div class="col-lg-6 menu-item isotope-item filter-@item.CategoryId">
-                        <img src="@item.ImageUrl" class="menu-img" alt="">
-                        <div class="menu-content">
-                            <a href="#">@item.Name</a>
-
-                            @if (item.discount > 0)
+                    <div class="scroll-container">
+                        <div class="scroll-content">
+                            @foreach (var category in Model.categories)
                             {
-                                <span style="text-decoration: line-through; color: red;">@item.Price تومان</span>
-                                <span>@(item.Price - (item.Price * ((double)item.discount / 100))) تومان</span>
+                                <div data-filter=".filter-@category.Id" class="category-item" id="category-top-@category.Id">
+                                    <img src="@category.ImageUrl" class="menu-img" style="width:100px;height:100px">
+                                    <p>@category.Name</p>
+                                </div>
                             }
-                            else
-                            {
-                                <span>@item.Price تومان</span>
-                            }
-
-                        </div>
-                        <div class="menu-ingredients">
-                            @item.Description
                         </div>
                     </div>
-                }
-            </div><!-- Menu Container -->
+                </div>
+            </div>
 
+            <!-- Menu Filters -->
+            <br /><br />
+            @foreach (var categories in Model.categories)
+            {
+                <div class="category-section" id="category-@categories.Id" data-aos="fade-up" style="display: flex; align-items: center; justify-content: center; margin-top: 50px;">
+                    <div style="flex-grow: 1; height: 1px; background-color: #ccc; margin-left: 10px; position: relative; top: 50%;"></div>
+                    <h6>@categories.Name</h6>
+                    <div style="flex-grow: 1; height: 1px; background-color: #ccc; margin-right: 10px; position: relative; top: 50%;"></div>
+                </div>
+
+                @foreach (var item in Model.menuItems)
+                {
+                    if (item.CategoryId == categories.Id)
+                    {
+                        <div style="width:100%; height:130px; background-color:rgba(70,71,75,0.14); padding-right:10px">
+                            <div class="image-container">
+                                @if (item.IsAvailable)
+                                {
+                                    <img src="@item.ImageUrl" class="image-behind" style="border-radius:10px; max-width:130px; max-height:130px" />
+                                }
+                                else
+                                {
+                                    <img src="/assets/img/TamamShod.png" class="image-behind" style="border-radius:10px; max-width:130px; max-height:130px"   />
+                                }
+                                @if (item.IsAvailable)
+                                {
+                                    @if (item.discount != 0)
+                                    {
+                                        if (item.discount == 5)
+                                        {
+                                            <img src="/assets//img/5%.png" class="image-front" />
+                                        }
+                                        else if (item.discount == 10)
+                                        {
+                                            <img src="/assets//img/10%.png" class="image-front" />
+                                        }
+                                        else if (item.discount == 15)
+                                        {
+                                            <img src="/assets//img/15%.png" class="image-front" />
+                                        }
+                                        else
+                                        {
+                                            <img src="/assets//img/20%.png" class="image-front" />
+                                        }
+                                    }
+                                }
+                                
+                            </div>
+                            <div style="float:left; height:100%; width:65%; line-height:15px; text-align:justify; display: flex;flex-direction: column;justify-content: flex-end;">
+                                <h5 style="margin-right:3%; ">@item.Name</h5>
+                                <br />
+                                <p style="margin-right:3%; margin-left:3%; margin-top:-10px">@item.Description</p>
+                                <div style="bottom:0; height:100%; width:100%;">
+                                    <br />
+                                    <h5 style="margin-right:3%;">قیمت : @item.Price تومان</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    }
+                }
+                <br />
+            }
 
         </div>
 
     </section><!-- /Menu Section -->
 </main>
 
-
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const filterButtons = document.querySelectorAll(".menu-filters li");
-        const menuItems = document.querySelectorAll(".menu-item");
 
-        filterButtons.forEach(button => {
-            button.addEventListener("click", () => {
-                const filterValue = button.getAttribute("data-filter");
+        const scrollContainer = document.querySelector(".scroll-container");
+        const categoryItems = document.querySelectorAll(".category-item");
+        const categorySections = document.querySelectorAll(".category-section");
 
-                // تغییر کلاس فعال برای فیلتر
-                document.querySelector(".filter-active").classList.remove("filter-active");
-                button.classList.add("filter-active");
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const categoryId = entry.target.id.replace("category-", "category-top-");
 
-                // فیلترسازی آیتم‌های منو
-                menuItems.forEach(item => {
-                    if (filterValue === "*" || item.classList.contains(filterValue.substring(1))) {
-                        item.style.display = "block";
-                    } else {
-                        item.style.display = "none";
+                        categoryItems.forEach((item) => item.classList.remove("active"));
+                        const activeItem = document.getElementById(categoryId);
+                        if (activeItem) {
+                            activeItem.classList.add("active");
+
+                            const containerWidth = scrollContainer.offsetWidth;
+                            const itemOffsetLeft = activeItem.offsetLeft;
+                            const itemWidth = activeItem.offsetWidth;
+                            const scrollPosition = itemOffsetLeft - (containerWidth / 2) + (itemWidth / 2);
+                            scrollContainer.scrollTo({ left: scrollPosition, behavior: "smooth" });
+                        }
                     }
                 });
+            },
+            { threshold: 0.5 }
+        );
+
+        categorySections.forEach((section) => observer.observe(section));
+
+        categoryItems.forEach((item) => {
+            item.addEventListener("click", function () {
+                const targetId = item.getAttribute("id").replace("category-top-", "category-");
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    const offsetAdjustment = 250;
+                    const targetPosition =
+                        targetSection.getBoundingClientRect().top + window.pageYOffset - offsetAdjustment;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: "smooth",
+                    });
+                }
             });
         });
     });
-
 </script>

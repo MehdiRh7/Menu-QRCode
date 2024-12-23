@@ -1,9 +1,9 @@
-﻿namespace Menu_QRCode
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace Menu_QRCode
 {
-    public class User
+    public class User : IdentityUser
     {
-        public Guid Id { get; set; }    
-        public string FullName { get; set; }    
-        public string Role { get; set; }    
+        public string Role { get; set; }
     }
 }
