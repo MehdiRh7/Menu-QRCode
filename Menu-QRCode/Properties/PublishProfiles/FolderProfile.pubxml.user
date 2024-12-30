@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\bin\Release\net8.0\publish\</_PublishTargetUrl>
-    <History>True|2024-11-01T21:25:05.4785433Z;</History>
+    <History>True|2024-12-30T19:20:07.2164970Z;True|2024-11-02T00:55:05.4785433+03:30;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

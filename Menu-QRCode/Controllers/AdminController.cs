@@ -38,15 +38,19 @@ namespace Menu_QRCode.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(string username, string password)
         {
-            
             var user = await _userManager.FindByNameAsync(username);
-            
-
             if (user != null && await _userManager.CheckPasswordAsync(user, password))
             {
-                if (user.Role == "Admin") 
+                if (user.Role == "Admin")
                 {
                     await _signInManager.SignInAsync(user, isPersistent: false);
+
+                    HttpContext.Response.Cookies.Append("AdminAccess", "true", new CookieOptions
+                    {
+                        HttpOnly = true,
+                        Secure = true
+                    });
+
                     return RedirectToAction("CategoriesList", "Admin");
                 }
                 else
@@ -55,12 +59,11 @@ namespace Menu_QRCode.Controllers
                     return View();
                 }
             }
-            else
-            {
-                ModelState.AddModelError(string.Empty, "نام کاربری یا رمز عبور اشتباه است.");
-                return View();
-            }
+
+            ModelState.AddModelError(string.Empty, "نام کاربری یا رمز عبور اشتباه است.");
+            return View();
         }
+
         [Authorize(Roles = "Admin")]
         public IActionResult CategoriesList()
         {
@@ -72,6 +75,8 @@ namespace Menu_QRCode.Controllers
             return View();
         }
         [HttpPost]
+        [Authorize(Roles = "Admin")]
+
         public IActionResult CreateCategory(Category category, IFormFile ImageUrl)
         {
             if (ImageUrl != null && ImageUrl.Length > 0)
@@ -94,12 +99,15 @@ namespace Menu_QRCode.Controllers
             return RedirectToAction("CategoriesList");
         }
 
+        [Authorize(Roles = "Admin")]
 
         public IActionResult UpdateCategory(Guid id) 
         {
             return View(_categoryRepository.GetById(id));
         }
         [HttpPost]
+        [Authorize(Roles = "Admin")]
+
         public IActionResult UpdateCategory(Category category, IFormFile ImageUrl)
         {
             var cg = _categoryRepository.GetById(category.Id);
@@ -128,6 +136,7 @@ namespace Menu_QRCode.Controllers
             return RedirectToAction("CategoriesList");
         }
 
+        [Authorize(Roles = "Admin")]
 
         public IActionResult DeleteCategory(Guid id) 
         {
@@ -135,6 +144,8 @@ namespace Menu_QRCode.Controllers
             return View(category);
         }
         [HttpPost]
+        [Authorize(Roles = "Admin")]
+
         public IActionResult DeleteCategory(Category category) 
         {
             var cg = _categoryRepository.GetById(category.Id);
@@ -150,10 +161,14 @@ namespace Menu_QRCode.Controllers
             _categoryRepository.Save();
             return RedirectToAction("CategoriesList");
         }
+        [Authorize(Roles = "Admin")]
+
         public IActionResult MenuItemsList()
         {
             return View(_menuItemRepository.GetAll());
         }
+        [Authorize(Roles = "Admin")]
+
         public IActionResult CreateMenuItem()
         {
             var categories = _categoryRepository.GetAll();
@@ -161,6 +176,8 @@ namespace Menu_QRCode.Controllers
             return View();
         }
         [HttpPost]
+        [Authorize(Roles = "Admin")]
+
         public IActionResult CreateMenuItem(MenuItem menuItem, IFormFile ImageUrl)
         {
             if (ImageUrl != null && ImageUrl.Length > 0)
@@ -183,6 +200,8 @@ namespace Menu_QRCode.Controllers
             ViewBag.CategoryId = new SelectList(categories, "Id", "Name");
             return RedirectToAction("MenuItemsList");
         }
+        [Authorize(Roles = "Admin")]
+
         public IActionResult UpdateMenuItem(Guid id)
         {
             var categories = _categoryRepository.GetAll();
@@ -190,6 +209,8 @@ namespace Menu_QRCode.Controllers
             return View(_menuItemRepository.GetById(id));
         }
         [HttpPost]
+        [Authorize(Roles = "Admin")]
+
         public IActionResult UpdateMenuItem(MenuItem menuItem, IFormFile ImageUrl)
         {
             var mi = _menuItemRepository.GetById(menuItem.Id);
@@ -217,6 +238,8 @@ namespace Menu_QRCode.Controllers
             ViewBag.CategoryId = new SelectList(categories, "Id", "Name");
             return RedirectToAction("MenuItemsList");
         }
+        [Authorize(Roles = "Admin")]
+
         public IActionResult DeleteMenuItem(Guid id)
         {
             var categories = _categoryRepository.GetAll();
@@ -224,6 +247,8 @@ namespace Menu_QRCode.Controllers
             return View(_menuItemRepository.GetById(id));
         }
         [HttpPost]
+        [Authorize(Roles = "Admin")]
+
         public IActionResult DeleteMenuItem(MenuItem menuItem)
         {
             var mi = _menuItemRepository.GetById(menuItem.Id);

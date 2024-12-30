@@ -8244,19 +8244,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Stocknew1\\.nuget\\packages\\": {}
+    "C:\\Users\\Mehdi Rh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Stocknew1\\source\\repos\\Menu_QRCode\\Menu-QRCode\\Menu-QRCode.csproj",
+      "projectUniqueName": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\Menu-QRCode.csproj",
       "projectName": "Menu-QRCode",
-      "projectPath": "C:\\Users\\Stocknew1\\source\\repos\\Menu_QRCode\\Menu-QRCode\\Menu-QRCode.csproj",
-      "packagesPath": "C:\\Users\\Stocknew1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Stocknew1\\source\\repos\\Menu_QRCode\\Menu-QRCode\\obj\\",
+      "projectPath": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\Menu-QRCode.csproj",
+      "packagesPath": "C:\\Users\\Mehdi Rh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\Menu-QRCode\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Stocknew1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mehdi Rh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8270,8 +8270,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Stocknew1\\source\\repos\\Menu_QRCode\\DataLayer\\DataLayer.csproj": {
-              "projectPath": "C:\\Users\\Stocknew1\\source\\repos\\Menu_QRCode\\DataLayer\\DataLayer.csproj"
+            "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\DataLayer\\DataLayer.csproj": {
+              "projectPath": "C:\\Users\\Mehdi Rh\\source\\repos\\Menu-QRCode\\DataLayer\\DataLayer.csproj"
             }
           }
         }
@@ -8280,11 +8280,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -8351,7 +8346,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
