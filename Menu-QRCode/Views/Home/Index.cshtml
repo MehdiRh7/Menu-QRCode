@@ -123,7 +123,7 @@
             </div>
             <img src="/assets/img/T-Art Logo.png" alt="Logo" style="width: 130px; height: 130px; position: relative; z-index: 1;">
             <div style="flex-grow: 1; height: 1px; background-color: #ccc; margin-right: 10px; position: relative; top: 50%;">
-                <span style="position: absolute; bottom: 100%; left: 0; transform: translateY(-50%); font-size: 20px; color: white;">art ـــــــــ T</span>
+                <span style="position: absolute; bottom: 100%; left: 0; transform: translateY(-50%); font-size: 20px; color: white;">T - art</span>
             </div>
         </div>
         <!-- End Section Title -->
@@ -161,14 +161,14 @@
                     if (item.CategoryId == categories.Id)
                     {
                         <div style="width:100%; height:130px; background-color:rgba(70,71,75,0.14); padding-right:10px">
-                            <div class="image-container">
+                            <div class="image-container" style="max-width: 130px; max-height: 130px;">
                                 @if (item.IsAvailable)
                                 {
-                                    <img src="@item.ImageUrl" class="image-behind" style="border-radius:10px; max-width:130px; max-height:130px" />
+                                    <img src="@item.ImageUrl" class="image-behind" style="border-radius: 10px; width: 130px; height: 130px;" />
                                 }
                                 else
                                 {
-                                    <img src="/assets/img/TamamShod.png" class="image-behind" style="border-radius:10px; max-width:130px; max-height:130px"   />
+                                    <img src="/assets/img/TamamShod.png" class="image-behind" style="border-radius: 10px; max-width: 130px; max-height: 130px;" />
                                 }
                                 @if (item.IsAvailable)
                                 {
@@ -176,34 +176,36 @@
                                     {
                                         if (item.discount == 5)
                                         {
-                                            <img src="/assets//img/5%.png" class="image-front" />
+                                            <img src="/assets/img/5%.png" class="image-front" />
                                         }
                                         else if (item.discount == 10)
                                         {
-                                            <img src="/assets//img/10%.png" class="image-front" />
+                                            <img src="/assets/img/10%.png" class="image-front" />
                                         }
                                         else if (item.discount == 15)
                                         {
-                                            <img src="/assets//img/15%.png" class="image-front" />
+                                            <img src="/assets/img/15%.png" class="image-front" />
                                         }
                                         else
                                         {
-                                            <img src="/assets//img/20%.png" class="image-front" />
+                                            <img src="/assets/img/20%.png" class="image-front" />
                                         }
                                     }
                                 }
-                                
                             </div>
-                            <div style="float:left; height:100%; width:65%; line-height:15px; text-align:justify; display: flex;flex-direction: column;justify-content: flex-end;">
-                                <h5 style="margin-right:3%; ">@item.Name</h5>
-                                <br />
-                                <p style="margin-right:3%; margin-left:3%; margin-top:-10px">@item.Description</p>
-                                <div style="bottom:0; height:100%; width:100%;">
-                                    <br />
-                                    <h5 style="margin-right:3%;">قیمت : @item.Price تومان</h5>
+                            <div style="flex: 1; padding: 0 10px; display: flex; flex-direction: column; justify-content: space-between;">
+                                <div>
+                                    <h5 style="margin-right: 3%;">@item.Name</h5>
+                                    <p style="margin-right: 3%; margin-left: 3%; line-height: 20px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">
+                                        @item.Description
+                                    </p>
+                                </div>
+                                <div style="margin-right: 3%; text-align: right;">
+                                    <h6>قیمت : @item.Price تومان</h6>
                                 </div>
                             </div>
                         </div>
+
                         <br />
                     }
                 }

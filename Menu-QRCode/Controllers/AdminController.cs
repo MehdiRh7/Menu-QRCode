@@ -103,26 +103,28 @@ namespace Menu_QRCode.Controllers
         public IActionResult UpdateCategory(Category category, IFormFile ImageUrl)
         {
             var cg = _categoryRepository.GetById(category.Id);
-            if (ImageUrl != null && ImageUrl.Length > 0)
+            if (!string.IsNullOrEmpty(cg.ImageUrl))
             {
-                if (!string.IsNullOrEmpty(cg.ImageUrl))
+                var oldImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", cg.ImageUrl.TrimStart('/'));
+                if (System.IO.File.Exists(oldImagePath))
                 {
-                    var oldImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", cg.ImageUrl.TrimStart('/'));
-                    if (System.IO.File.Exists(oldImagePath))
-                    {
-                        System.IO.File.Delete(oldImagePath);
-                    }
+                    System.IO.File.Delete(oldImagePath);
                 }
-                var newPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/assets/img", ImageUrl.FileName);
-                using (var stream = new FileStream(newPath, FileMode.Create))
+            }
+            else if (ImageUrl != null && ImageUrl.Length > 0)
+            {
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/assets/img", ImageUrl.FileName);
+
+                using (var stream = new FileStream(path, FileMode.Create))
                 {
                     ImageUrl.CopyTo(stream);
                 }
-                cg.ImageUrl = $"/assets/img/{ImageUrl.FileName}";
+                category.ImageUrl = $"/assets/img/{ImageUrl.FileName}";
             }
-            _categoryRepository.UpdateCategory(cg);
+            _categoryRepository.UpdateCategory(category);
             _categoryRepository.Save();
-
+            var categories = _categoryRepository.GetAll();
+            ViewBag.CategoryId = new SelectList(categories, "Id", "Name");
             return RedirectToAction("CategoriesList");
         }
 
