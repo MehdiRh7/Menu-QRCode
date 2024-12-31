@@ -13,7 +13,10 @@ C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\obj\Release\net8.0\PubTmp
 C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Components.QuickGrid.dll
 C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.dll
 C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Metadata.dll
 C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\obj\Release\net8.0\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
@@ -40,6 +43,8 @@ C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\obj\Release\net8.0\PubTmp
 C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\obj\Release\net8.0\PubTmp\Out\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\obj\Release\net8.0\PubTmp\Out\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\obj\Release\net8.0\PubTmp\Out\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\obj\Release\net8.0\PubTmp\Out\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\obj\Release\net8.0\PubTmp\Out\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\obj\Release\net8.0\PubTmp\Out\Microsoft.Extensions.Logging.dll
 C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\obj\Release\net8.0\PubTmp\Out\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\obj\Release\net8.0\PubTmp\Out\Microsoft.Extensions.Options.dll
