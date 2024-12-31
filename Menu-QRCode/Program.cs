@@ -5,6 +5,7 @@ using DataLayer.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Menu_QRCode;
+using Microsoft.AspNetCore.DataProtection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -45,8 +46,19 @@ if (!app.Environment.IsDevelopment())
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
-    await SeedAdminUserAsync(services); 
+    try
+    {
+        var context = services.GetRequiredService<Context>();
+        context.Database.Migrate();
+        await SeedAdminUserAsync(services); 
+    }
+    catch (Exception ex)
+    {
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "An error occurred while seeding the database.");
+    }
 }
+
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
