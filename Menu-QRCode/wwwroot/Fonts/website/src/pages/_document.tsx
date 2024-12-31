@@ -22,7 +22,7 @@ export default class MyDocument extends Document {
           {/* PWA primary color */}
           {/* <meta name="theme-color" content={theme.palette.primary.main} /> */}
 
-          <link rel="shortcut icon" href={`${BASE_PATH}/images/favicon.ico`} />
+
           <link rel="stylesheet" href={`${VAZIRMATN_CSS_URL}`} />
           <link rel="stylesheet" href={`${VAZIRMATN_RD_CSS_URL}`} />
           <meta
