@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Users\Mehdi Rh\source\repos\Menu-QRCode\Menu-QRCode\bin\Release\net8.0\publish\</_PublishTargetUrl>
-    <History>True|2024-12-30T19:20:07.2164970Z;True|2024-11-02T00:55:05.4785433+03:30;</History>
+    <_PublishTargetUrl>C:\Users\Stocknew1\source\repos\Menu_QRCode\Menu-QRCode\bin\Release\net8.0\publish\</_PublishTargetUrl>
+    <History>True|2024-12-31T16:24:32.4480357Z;True|2024-12-31T18:11:10.9453910+03:30;True|2024-12-31T18:07:18.5285283+03:30;True|2024-12-31T17:31:16.4195083+03:30;True|2024-12-31T16:43:04.0726511+03:30;True|2024-12-31T15:41:56.7099647+03:30;False|2024-12-31T15:35:25.1723490+03:30;True|2024-12-30T22:50:07.2164970+03:30;True|2024-11-02T00:55:05.4785433+03:30;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

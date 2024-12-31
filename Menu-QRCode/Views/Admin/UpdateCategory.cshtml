@@ -26,6 +26,7 @@
             <div class="form-group">
                 <label asp-for="ImageUrl" class="control-label"></label>
                 <input type="file" name="ImageUrl" class="form-control" />
+                <input type="hidden" asp-for="ImageUrl" value="@Model.ImageUrl" />
                 <span asp-validation-for="ImageUrl" class="text-danger"></span>
                 
 

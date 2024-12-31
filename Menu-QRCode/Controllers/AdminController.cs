@@ -103,7 +103,8 @@ namespace Menu_QRCode.Controllers
 
         public IActionResult UpdateCategory(Guid id) 
         {
-            return View(_categoryRepository.GetById(id));
+            var categories = _categoryRepository.GetById(id);
+            return View(categories);
         }
         [HttpPost]
         [Authorize(Roles = "Admin")]
@@ -111,15 +112,17 @@ namespace Menu_QRCode.Controllers
         public IActionResult UpdateCategory(Category category, IFormFile ImageUrl)
         {
             var cg = _categoryRepository.GetById(category.Id);
-            if (!string.IsNullOrEmpty(cg.ImageUrl))
-            {
-                var oldImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", cg.ImageUrl.TrimStart('/'));
-                if (System.IO.File.Exists(oldImagePath))
-                {
-                    System.IO.File.Delete(oldImagePath);
-                }
-            }
-            else if (ImageUrl != null && ImageUrl.Length > 0)
+
+            //if (!string.IsNullOrEmpty(cg.ImageUrl) && ImageUrl != null && ImageUrl.Length > 0 )
+            //{
+            //    var oldImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", cg.ImageUrl.TrimStart('/'));
+            //    if (System.IO.File.Exists(oldImagePath))
+            //    {
+            //        System.IO.File.Delete(oldImagePath);
+            //    }
+            //}
+
+            if (ImageUrl != null && ImageUrl.Length > 0)
             {
                 var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/assets/img", ImageUrl.FileName);
 
@@ -127,13 +130,18 @@ namespace Menu_QRCode.Controllers
                 {
                     ImageUrl.CopyTo(stream);
                 }
-                category.ImageUrl = $"/assets/img/{ImageUrl.FileName}";
+                cg.ImageUrl = $"/assets/img/{ImageUrl.FileName}";
             }
-            _categoryRepository.UpdateCategory(category);
+            else
+            {
+                cg.ImageUrl = cg.ImageUrl;
+            }
+
+            _categoryRepository.UpdateCategory(cg);
             _categoryRepository.Save();
-            var categories = _categoryRepository.GetAll();
-            ViewBag.CategoryId = new SelectList(categories, "Id", "Name");
+
             return RedirectToAction("CategoriesList");
+
         }
 
         [Authorize(Roles = "Admin")]
@@ -149,14 +157,14 @@ namespace Menu_QRCode.Controllers
         public IActionResult DeleteCategory(Category category) 
         {
             var cg = _categoryRepository.GetById(category.Id);
-            if (!string.IsNullOrEmpty(cg.ImageUrl))
-            {
-                var oldImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", cg.ImageUrl.TrimStart('/'));
-                if (System.IO.File.Exists(oldImagePath))
-                {
-                    System.IO.File.Delete(oldImagePath);
-                }
-            }
+            //if (!string.IsNullOrEmpty(cg.ImageUrl))
+            //{
+            //    var oldImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", cg.ImageUrl.TrimStart('/'));
+            //    if (System.IO.File.Exists(oldImagePath))
+            //    {
+            //        System.IO.File.Delete(oldImagePath);
+            //    }
+            //}
             _categoryRepository.DeleteCategory(cg);
             _categoryRepository.Save();
             return RedirectToAction("CategoriesList");
@@ -182,13 +190,13 @@ namespace Menu_QRCode.Controllers
         {
             if (ImageUrl != null && ImageUrl.Length > 0)
             {
-                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/assets/img/menu", ImageUrl.FileName);
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/assets/img", ImageUrl.FileName);
 
                 using (var stream = new FileStream(path, FileMode.Create))
                 {
                     ImageUrl.CopyTo(stream);
                 }
-                menuItem.ImageUrl = $"/assets/img/menu/{ImageUrl.FileName}";
+                menuItem.ImageUrl = $"/assets/img/{ImageUrl.FileName}";
             }
             if (menuItem.Description == null)
             {
@@ -214,23 +222,24 @@ namespace Menu_QRCode.Controllers
         public IActionResult UpdateMenuItem(MenuItem menuItem, IFormFile ImageUrl)
         {
             var mi = _menuItemRepository.GetById(menuItem.Id);
-            if (!string.IsNullOrEmpty(mi.ImageUrl))
+            //if (!string.IsNullOrEmpty(mi.ImageUrl))
+            //{
+            //    var oldImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", mi.ImageUrl.TrimStart('/'));
+            //    if (System.IO.File.Exists(oldImagePath))
+            //    {
+            //        System.IO.File.Delete(oldImagePath);
+            //    }
+                
+            //}
+            if (ImageUrl != null && ImageUrl.Length > 0)
             {
-                var oldImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", mi.ImageUrl.TrimStart('/'));
-                if (System.IO.File.Exists(oldImagePath))
-                {
-                    System.IO.File.Delete(oldImagePath);
-                }
-            }
-            else if (ImageUrl != null && ImageUrl.Length > 0)
-            {
-                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/assets/img/menu", ImageUrl.FileName);
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/assets/img", ImageUrl.FileName);
 
                 using (var stream = new FileStream(path, FileMode.Create))
                 {
                     ImageUrl.CopyTo(stream);
                 }
-                menuItem.ImageUrl = $"/assets/img/menu/{ImageUrl.FileName}";
+                menuItem.ImageUrl = $"/assets/img/{ImageUrl.FileName}";
             }
             _menuItemRepository.UpdateMenuItem(menuItem);
             _menuItemRepository.Save();
@@ -252,14 +261,14 @@ namespace Menu_QRCode.Controllers
         public IActionResult DeleteMenuItem(MenuItem menuItem)
         {
             var mi = _menuItemRepository.GetById(menuItem.Id);
-            if (!string.IsNullOrEmpty(mi.ImageUrl))
-            {
-                var oldImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", mi.ImageUrl.TrimStart('/'));
-                if (System.IO.File.Exists(oldImagePath))
-                {
-                    System.IO.File.Delete(oldImagePath);
-                }
-            }
+            //if (!string.IsNullOrEmpty(mi.ImageUrl))
+            //{
+            //    var oldImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", mi.ImageUrl.TrimStart('/'));
+            //    if (System.IO.File.Exists(oldImagePath))
+            //    {
+            //        System.IO.File.Delete(oldImagePath);
+            //    }
+            //}
             _menuItemRepository.DeleteMenuItem(mi);
             _menuItemRepository.Save();
             var categories = _categoryRepository.GetAll();
